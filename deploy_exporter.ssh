@@ -1,0 +1,14 @@
+#!/bin/bash
+declare -a hosts=("root@sol" 
+                "root@pg12a" 
+                "root@pg12b"
+                "root@pg12c"
+                )
+
+
+for i in "${arr[@]}"
+do
+   ssh $i systemctl stop postgres_exporter
+   scp postgres_exporter $i:/usr/sbin/postgres_exporter
+   ssh $i systemctl start postgres_exporter
+done

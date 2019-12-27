@@ -1,0 +1,58 @@
+[
+  {
+    "targets": [ "pg12a:9100" ],
+    "labels": {
+      "env": "prod",
+      "job": "node"
+    }
+  },
+  {
+    "targets": [ "pg12a:9187" ],
+    "labels": {
+      "env": "prod",
+      "job": "postgres"
+    }
+  },
+  {
+    "targets": [ "pg12b:9100" ],
+    "labels": {
+      "env": "prod",
+      "job": "node"
+    }
+  },
+  {
+    "targets": [ "pg12b:9187" ],
+    "labels": {
+      "env": "prod",
+      "job": "postgres"
+    }
+  },
+  {
+    "targets": [ "pg12c:9100"],
+    "labels": {
+      "env": "prod",
+      "job": "node"
+    }
+  },
+  {
+    "targets": [ "pg12c:9187" ],
+    "labels": {
+      "env": "prod",
+      "job": "postgres"
+    }
+  },
+  {
+    "targets": [ "sol:9100", "sol:9187" ],
+    "labels": {
+      "env": "monitoring",
+      "job": "node"
+    }
+  },
+  {
+    "targets": [ "sol:9187" ],
+    "labels": {
+      "env": "monitoring",
+      "job": "postgres"
+    }
+  }
+]
